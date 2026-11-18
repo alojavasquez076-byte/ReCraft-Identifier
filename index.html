@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReCraft-Identifier | Upcycled Pen & Recyclable Material AI</title>
+
+  <!-- Google Fonts: Editorial Serif + Clean Sans-Serif (Hierarchy & Unity) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- TensorFlow.js & Google Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+  <style>
+    :root {
+      /* Earthy Recycled Paper & Botanical Palette (Harmony & Contrast) */
+      --bg-paper: #f6f4ee;
+      --bg-kraft-tint: #ebe6d8;
+      --surface-white: #ffffff;
+      --forest-deep: #163a28;
+      --emerald-accent: #246a49;
+      --emerald-hover: #1b5238;
+      --sage-soft: #e2eee7;
+      --kraft-border: #cfc7b2;
+      --text-primary: #1c2520;
+      --text-secondary: #4e5d54;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --shadow-card: 0 12px 32px rgba(22, 58, 40, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-paper);
+      /* Subtle recycled paper dot texture */
+      background-image: radial-gradient(#d5cebc 0.75px, transparent 0.75px);
+      background-size: 20px 20px;
+      color: var(--text-primary);
+      line-height: 1.65;
+      padding: 2.5rem 1.25rem;
+    }
+
+    /* Balance & Whitespace */
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.75rem;
+    }
+
+    /* Header / Hierarchy */
+    header {
+      text-align: center;
+      padding: 1rem 0.5rem;
+    }
+
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--sage-soft);
+      color: var(--forest-deep);
+      border: 1px solid #b9d6c6;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.1rem, 4vw, 2.9rem);
+      color: var(--forest-deep);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
